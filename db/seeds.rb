@@ -8,3 +8,7 @@
 
 # User.create(name: "Pam", username: "pam", password: "password")
 
+orlando = Location.create(city: "Orlando", state: "Florida", country: "USA")
+disneyworld = orlando.attractions.create(name: "Disney World", description: "Happiest Place on Earth!")
+# pam = User.first
+# pam.trips.create()
