@@ -10,5 +10,9 @@
 
 orlando = Location.create(city: "Orlando", state: "Florida", country: "USA")
 disneyworld = orlando.attractions.create(name: "Disney World", description: "Happiest Place on Earth!")
-# pam = User.first
-# pam.trips.create()
+disneyworld = Attraction.first
+pam = User.first
+pam_disneyworld = pam.trips.create(start_date: ("2020-03-11"), end_date: ("2020-03-15"))
+
+pam_disneyworld.visits.create(attraction: disneyworld, date: "2020-03-11")
+pam.comments.create(content: "Dream come true", attraction: disneyworld)
